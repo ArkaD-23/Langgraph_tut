@@ -6,7 +6,6 @@ tools = [tool]
 tool.invoke("What's a 'node' in LangGraph?")
 
 def route_tools(state):
-    from model import State  # Move import inside the function
     if isinstance(state, list):
         ai_message = state[-1]
     elif messages := state.get("messages", []):
